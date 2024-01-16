@@ -1,17 +1,17 @@
 # Continual Learning in Visual Question Answering
 
 This repository contains information about the following three settings for studying continual learning in Visual Question Answering:
-- Taxonomy Domains: Each task is defined based on the objects that appear in the images. Objects from the same supercategory are grouped in the same task, leading to the five following tasks: Animals, Food, Interion, Sports, Transport.
+- Taxonomy Domains: Each task is defined based on the objects that appear in the images. Objects from the same supercategory are grouped in the same task, leading to the five following tasks: Animals, Food, Interior, Sports, Transport.
 The definitions of the tasks follow work by [Del Chiaro et al., 2020](https://arxiv.org/abs/2007.06271).
 
 
 - Diverse Domains: Each task is defined based on the objects that appear in the images. Different objects are grouped randomly together in each of the five tasks.
 
 - Question Types: Each task is defined based on the question type:
-Action Recognition (e.g. "What are they doing?"), Color Recognition (e.g. "What color hat is the man wearing?"), Counting ("How many of the people are wearing hats?"), Subcategory Recognition (e.g. "What type of hat is he wearing?"), Scene-level Recongition (e.g. "Was this photo taken indoors?").
+Action Recognition (e.g. "What are the kids doing?"), Color Recognition (e.g. "What color hat is the man wearing?"), Counting ("How many of the people are wearing hats?"), Subcategory Recognition (e.g. "What type of hat is he wearing?"), Scene-level Recongition (e.g. "Was this photo taken indoors?").
 The definitions of the tasks follow work by [Whitehead et al., 2021](https://arxiv.org/abs/2107.09106).
 
-## Dataset Statistics
+## Task Statistics per Setting
 
 ### Diverse Domains
 
@@ -46,7 +46,7 @@ The definitions of the tasks follow work by [Whitehead et al., 2021](https://arx
 
 ## Data
 1. Download the VQA data from the [visualqa.org](https://visualqa.org/download.html). Because the annotations from the test set are not publically available, the VQA-v2 validation data are used as the test set in ContVQA, and the VQA-v2 training data are split into train and validation set.
-2. Get the question ids for each task under the correspondig folder in `data/`. Each file contains the ids for the train/validation/test splits in the following format:
+2. Get the question ids for each task under the corresponding folder in `data/`. Each file contains the ids for the train/validation/test splits in the following format:
 
 ```
 {
