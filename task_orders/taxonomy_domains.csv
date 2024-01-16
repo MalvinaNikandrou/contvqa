@@ -1,0 +1,5 @@
+food,animals,sports,interior,transport
+transport,sports,food,animals,interior
+interior,animals,food,transport,sports
+animals,food,interior,sports,transport
+sports,interior,transport,animals,food

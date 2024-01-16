@@ -1,0 +1,5 @@
+action,count,subcategory,scene,color
+color,subcategory,action,count,scene
+scene,count,action,color,subcategory
+subcategory,color,scene,action,count
+count,scene,color,subcategory,action
