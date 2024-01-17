@@ -50,7 +50,7 @@ The definitions of the tasks follow work by [Whitehead et al., 2021](https://arx
 | Subcategory | 22324 | 8578 | 13564 | 659 |
 
 ## Data
-1. Download the VQA data from the [visualqa.org](https://visualqa.org/download.html). Because the annotations from the test set are not publically available, the VQA-v2 validation data are used as the test set in ContVQA, and the VQA-v2 training data are split into train and validation set.
+1. Download the VQA data from the [visualqa.org](https://visualqa.org/download.html). Because the annotations from the test set are not publicly available, the VQA-v2 validation data are used as the test set in ContVQA, and the VQA-v2 training data are split into train and validation set.
 2. Get the question ids for each task under the corresponding folder in `data/`. Each file contains the ids for the train/validation/test splits in the following format:
 
 ```
