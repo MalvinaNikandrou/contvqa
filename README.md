@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="figure.png" width="800"/>
+    <img src="figure.svg" width="900"/>
     <br>
 <p>
 # Continual Learning in Visual Question Answering
