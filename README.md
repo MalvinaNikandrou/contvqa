@@ -1,3 +1,8 @@
+<p align="center">
+    <br>
+    <img src="figure.png" width="800"/>
+    <br>
+<p>
 # Continual Learning in Visual Question Answering
 
 This repository contains information about the following three settings for studying continual learning in Visual Question Answering:
