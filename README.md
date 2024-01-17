@@ -1,16 +1,17 @@
+# Continual Learning in Visual Question Answering
+
 <p align="center">
     <br>
     <img src="figure.svg" width="900"/>
     <br>
 <p>
-# Continual Learning in Visual Question Answering
 
 This repository contains information about the following three settings for studying continual learning in Visual Question Answering:
-- Taxonomy Domains: Each task is defined based on the objects that appear in the images. Objects from the same supercategory are grouped in the same task, leading to the five following tasks: Animals, Food, Interior, Sports, Transport.
-The definitions of the tasks follow work by [Del Chiaro et al., 2020](https://arxiv.org/abs/2007.06271).
-
 
 - Diverse Domains: Each task is defined based on the objects that appear in the images. Different objects are grouped randomly together in each of the five tasks.
+
+- Taxonomy Domains: Each task is defined based on the objects that appear in the images. Objects from the same supercategory are grouped in the same task, leading to the five following tasks: Animals, Food, Interior, Sports, Transport.
+The definitions of the tasks follow work by [Del Chiaro et al., 2020](https://arxiv.org/abs/2007.06271).
 
 - Question Types: Each task is defined based on the question type:
 Action Recognition (e.g. "What are the kids doing?"), Color Recognition (e.g. "What color hat is the man wearing?"), Counting ("How many of the people are wearing hats?"), Subcategory Recognition (e.g. "What type of hat is he wearing?"), Scene-level Recongition (e.g. "Was this photo taken indoors?").
