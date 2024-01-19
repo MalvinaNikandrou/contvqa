@@ -48,7 +48,7 @@ The definitions of the tasks follow work by [Whitehead et al., 2021](https://arx
 | Color | 34588 | 8578 | 21559 | 92 |
 | Count | 38857 | 9649 | 23261 | 42 |
 | Scene | 25850 | 6417 | 14847 | 170 |
-| Subcategory | 22324 | 8578 | 13564 | 659 |
+| Subcategory | 22324 | 5419 | 13564 | 659 |
 
 ## Data
 1. Download the VQA data from the [visualqa.org](https://visualqa.org/download.html). Because the annotations from the test set are not publicly available, the VQA-v2 validation data are used as the test set in ContVQA, and the VQA-v2 training data are split into train and validation set.
