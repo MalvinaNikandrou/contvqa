@@ -327,8 +327,7 @@ def print_statistics(setting_task_qids: SeetingQIdsType) -> None:
         test = len(setting_task_qids[task]["val"])
         results.append([task, train_val, test])
     # Print the table
-    print(tabulate(results, headers="firstrow", tablefmt='pretty'))
-
+    print(tabulate(results, headers="firstrow", tablefmt="pretty"))
 
 
 if __name__ == "__main__":
@@ -348,6 +347,6 @@ if __name__ == "__main__":
         taxonomy_task_qids, diverse_task_qids
     )
     print("\033[1mDiverse Setting\033[0m")
-    print_statistics(diverse_task_qids) 
+    print_statistics(diverse_task_qids)
     print("\033[1mTaxonomy Setting\033[0m")
     print_statistics(taxonomy_task_qids)

@@ -23,32 +23,31 @@ The definitions of the tasks follow work by [Whitehead et al., 2021](https://arx
 
 | Task   | Train | Validation | Test | Number of Classes |
 |--------|:-----:|:----------:|:--------:|:----------:|
-|Group_1 |44254 |11148 |28315 |2205 |
-|Group_2 |39867 |10202 |22713 |1874 |
-|Group_3 |37477 |9386 |23095 |1849 |
-|Group_4 |35264 |8871 |22157 |2119 |
-|Group_5 |24454 |6028 |14490 |1777 |
-
+| Group_1 | 44254 |   11148    | 28315 |    2259     |
+| Group_2 | 39867 |   10202    | 22713 |    1929     |
+| Group_3 | 37477 |    9386    | 23095 |    1897     |
+| Group_4 | 35264 |    8871    | 21157 |    2165     |
+| Group_5 | 24454 |    6028    | 14490 |    1837     |
 
 ### Taxonomy Domains
 
 | Task   | Train | Validation | Test | Number of Classes |
 |--------|:-----:|:----------:|:--------:|:----------:|
-| Animals | 37270 | 9237 | 22588 | 1331 |
-| Food | 26191 | 6612 | 15967 | 1365 |
-| Interior | 43576 | 11038 | 26594 | 2096 |
-| Sports | 32885 | 8468 | 19205 | 1471 |
-| Transport | 41394 | 10280 | 25416 | 1954 |
+|  Animals  | 37270 |    9237    | 22588 |    1378     |
+|   Food    | 26191 |    6612    | 15967 |    1419     |
+| Interior  | 43576 |   11038    | 26594 |    2143     |
+|  Sports   | 32885 |    8468    | 19205 |    1510     |
+| Transport | 41394 |   10280    | 25416 |    2009     |
 
 ### Question Types
 
 | Task   | Train | Validation | Test | Number of Classes |
 |--------|:-----:|:----------:|:--------:|:----------:|
-| Action | 18730 | 4700 | 11008 | 233 |
-| Color | 34588 | 8578 | 21559 | 92 |
-| Count | 38857 | 9649 | 23261 | 42 |
-| Scene | 25850 | 6417 | 14847 | 170 |
-| Subcategory | 22324 | 5419 | 13564 | 659 |
+|   Action    | 18730 |    4700    | 11008 |     233     |
+|    Color    | 34588 |    8578    | 21559 |     92      |
+|    Count    | 38857 |    9649    | 23261 |     42      |
+|    Scene    | 25850 |    6417    | 14847 |     170     |
+| Subcategory | 22324 |    5419    | 13564 |     659     |
 
 ## Data
 1. Download the VQA data from the [visualqa.org](https://visualqa.org/download.html). Because the annotations from the test set are not publicly available, the VQA-v2 validation data are used as the test set in ContVQA, and the VQA-v2 training data are split into train and validation set.
@@ -64,6 +63,17 @@ The definitions of the tasks follow work by [Whitehead et al., 2021](https://arx
 ```
 
 For more details about the settings please refer to our [preprint](https://arxiv.org/abs/2210.00044). Note that the main results are averaged over five random task orders which can be found under `task_orders/`.
+
+
+## Code 
+If you want to run any of the provided code (to get dataset statistics or plots), first run:
+
+```bash
+# Tested with Python 3.10 
+pip install -r requirements.txt
+pip install -e .
+./scripts/download_extra_data.sh
+```
 
 ## Citation
 
