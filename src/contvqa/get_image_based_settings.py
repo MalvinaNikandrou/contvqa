@@ -332,8 +332,8 @@ def print_statistics(setting_task_qids: SeetingQIdsType) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--coco_path", default="vqa_v2_data/")
-    parser.add_argument("--vqa_path", default="vqa_v2_data/")
+    parser.add_argument("--coco_path", default="data/vqa_v2_data/annotations")
+    parser.add_argument("--vqa_path", default="data/vqa_v2_data/")
     parser.add_argument(
         "--new_random_groups",
         action="store_true",
