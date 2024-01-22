@@ -10,7 +10,7 @@ from itertools import chain
 from spacy.lang.en import English
 from typing import Dict, Set
 
-from contvqa.common import get_answer_set_for_question
+from common import get_answer_set_for_question
 
 
 cls = spacy.util.get_lang_class("en")

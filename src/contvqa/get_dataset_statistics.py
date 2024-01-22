@@ -7,7 +7,7 @@ from functools import lru_cache
 from typing import Literal, Dict
 from tabulate import tabulate
 
-from contvqa.common import read_json, get_vqa_v2_mc_answers, get_vqa_v2_answer_sets
+from common import read_json, get_vqa_v2_mc_answers, get_vqa_v2_answer_sets
 from itertools import chain
 
 
