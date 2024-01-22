@@ -8,6 +8,7 @@ import spacy
 from collections import Counter, defaultdict
 from itertools import chain
 from spacy.lang.en import English
+from typing import Dict, Set
 
 from contvqa.common import get_answer_set_for_question
 
@@ -19,7 +20,7 @@ cls.Defaults.stop_words.remove("made")
 nlp = English()
 
 
-def get_question_ids_to_answers(vqa_dir: str) -> dict[str, set[str]]:
+def get_question_ids_to_answers(vqa_dir: str) -> Dict[str, Set[str]]:
     with open(os.path.join(vqa_dir, "v2_mscoco_train2014_annotations.json"), "r") as fp:
         annotations = json.load(fp)["annotations"]
     answers = {
@@ -29,7 +30,7 @@ def get_question_ids_to_answers(vqa_dir: str) -> dict[str, set[str]]:
     return answers
 
 
-def get_question_ids_to_questions(vqa_dir: str) -> dict[str, str]:
+def get_question_ids_to_questions(vqa_dir: str) -> Dict[str, str]:
     with open(
         os.path.join(vqa_dir, "v2_OpenEnded_mscoco_train2014_questions.json"), "r"
     ) as fp:

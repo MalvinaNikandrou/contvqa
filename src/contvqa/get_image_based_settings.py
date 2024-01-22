@@ -14,7 +14,7 @@ from os.path import join
 from pycocotools.coco import COCO
 from random import shuffle
 from tabulate import tabulate
-from typing import Literal
+from typing import Literal, Dict, List, Set, Tuple
 
 
 # Categories for each domain
@@ -142,12 +142,12 @@ categories_group_5 = [
 ]
 
 SplitType = Literal["train", "val"]
-SeetingQIdsType = dict[str, dict[SplitType, list[str]]]
+SeetingQIdsType = Dict[str, Dict[SplitType, List[str]]]
 
 
 def get_categories_per_task(
     setting: Literal["taxonomy", "diverse"], new_random_groups: bool = False
-) -> dict[str, list[str]]:
+) -> Dict[str, List[str]]:
     """Get categories per task depending on the setting."""
     domain_to_categories = {
         "transport": categories_transport,
@@ -185,8 +185,8 @@ def get_categories_per_task(
 
 
 def coco_tasks_img_ids(
-    coco_instances_annotation_path: str, tasks: dict[str, list[str]]
-) -> dict[str, set[str]]:
+    coco_instances_annotation_path: str, tasks: Dict[str, List[str]]
+) -> Dict[str, Set[str]]:
     """Get the image ids for each task."""
     # Loading COCO dataset with object detection labels:
     coco = COCO(coco_instances_annotation_path)
@@ -214,8 +214,8 @@ def coco_tasks_img_ids(
 
 
 def coco_split_tasks_img_ids(
-    coco_path: str, tasks: dict[str, list[str]]
-) -> dict[str, list[str]]:
+    coco_path: str, tasks: Dict[str, List[str]]
+) -> Dict[str, List[str]]:
     """You can download the COCO dataset from here: http://cocodataset.org/#download
 
     Specifically, download and extract "2014 Train/Val annotations"
@@ -282,7 +282,7 @@ def get_splits_for_setting(
 
 def get_common_questions_from_settings(
     taxonomy_task_qids: SeetingQIdsType, diverse_task_qids: SeetingQIdsType
-) -> tuple[SeetingQIdsType, SeetingQIdsType]:
+) -> Tuple[SeetingQIdsType, SeetingQIdsType]:
     """Keep only the question ids that appear in both settings."""
     print("\nGet common questions from both settings")
     final_taxonomy_task_qids = {
