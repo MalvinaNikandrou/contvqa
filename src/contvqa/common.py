@@ -7,7 +7,7 @@ from functools import lru_cache
 from typing import Literal
 from tabulate import tabulate
 from itertools import chain
-from contvqa.answer_preprocessing import prep_ans
+from answer_preprocessing import prep_ans
 
 
 def read_json(path: str) -> dict:

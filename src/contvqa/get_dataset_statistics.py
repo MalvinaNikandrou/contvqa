@@ -4,10 +4,10 @@ import os
 
 from collections import defaultdict, Counter
 from functools import lru_cache
-from typing import Literal
+from typing import Literal, Dict
 from tabulate import tabulate
 
-from contvqa.common import read_json, get_vqa_v2_mc_answers, get_vqa_v2_answer_sets
+from common import read_json, get_vqa_v2_mc_answers, get_vqa_v2_answer_sets
 from itertools import chain
 
 
@@ -49,7 +49,7 @@ def get_num_classes_per_task(
     return task_num_classes
 
 
-def get_num_of_samples_per_task(contvqa_dir: str) -> dict[str, dict[str, int]]:
+def get_num_of_samples_per_task(contvqa_dir: str) -> Dict[str, Dict[str, int]]:
     """Get the number of samples per task for a given setting."""
     with open(os.path.join(contvqa_dir, "train_question_ids.json"), "r") as f:
         train_ids = json.load(f)
